@@ -143,7 +143,7 @@ QBCore.Functions.CreateCallback("qb-multicharacter:server:GetNumberOfCharacters"
             if v.license == license then
                 numOfChars = v.numberOfChars
                 break
-            else 
+            else
                 numOfChars = Config.DefaultNumberOfCharacters
             end
         end

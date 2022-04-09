@@ -65,7 +65,8 @@ RegisterNetEvent('qb-multicharacter:client:closeNUIdefault', function() -- This 
     Wait(500)
     DoScreenFadeIn(250)
     TriggerEvent('qb-weathersync:client:EnableSync')
-    TriggerEvent('qb-clothes:client:CreateFirstCharacter')
+		TriggerEvent('qbcront-missions:StartFirstTutorial')
+    --TriggerEvent('qb-clothes:client:CreateFirstCharacter')
 end)
 
 RegisterNetEvent('qb-multicharacter:client:closeNUI', function()
@@ -112,7 +113,7 @@ RegisterNUICallback('selectCharacter', function(data)
 end)
 
 RegisterNUICallback('cDataPed', function(data)
-    local cData = data.cData  
+    local cData = data.cData
     SetEntityAsMissionEntity(charPed, true, true)
     DeleteEntity(charPed)
     if cData ~= nil then
